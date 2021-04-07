@@ -164,3 +164,25 @@ SELECT TRIM('      빅 데이터      ')
 FROM dual;
 
 --앞뒤 여백 강제제거
+SELECT SUM(salary)합계, AVG(salary)평균, SUM(salary)/count(salary)계산평균
+
+FROM employees;
+
+SELECT MAX(salary) 최댓값, MIN(first_name) 최대문자값, MIN(first_name) 최소문자값
+
+
+
+SELECT job_id 직무, SUM(salary) 직무별_총급여, AVG(salary) 직무별_평균급여
+
+FROM employees
+
+WHERE employee_id >= 10
+
+GROUP BY job_id
+
+ORDER BY 직무별_총급여 DESC, 직무별_평균급여;
+
+
+
+
+FROM employees;
